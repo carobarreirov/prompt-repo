@@ -49,5 +49,5 @@ for (let i of catalog.data) {
     container.appendChild(buying);
   
     card.appendChild(container);
-    document.getElementById("catalog").appendChild(card);
+    document.getElementById("portfolio-grid").appendChild(card);
   }
