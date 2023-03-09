@@ -1,7 +1,8 @@
-for (let i of catalog.data) {
+for (let i of database.data) {
     //Create Card
     let card = document.createElement("div");
-    card.setAttribute("id", i.productName);
+    card.classList.add("item");
+    card.setAttribute("id", i.projectName);
     //Card should have category and should stay hidden initially
     card.classList.add("card", i.category, "hide");
     //image div
@@ -18,7 +19,7 @@ for (let i of catalog.data) {
     //product name
     let name = document.createElement("h5");
     name.classList.add("product-name");
-    name.innerText = i.productName.toUpperCase();
+    name.innerText = i.projectName.toUpperCase();
     container.appendChild(name);
     //price
     let price = document.createElement("h6");
@@ -32,14 +33,6 @@ for (let i of catalog.data) {
   
     let division = document.createElement("hr");
     container.appendChild(division);
-  
-    //order and editing invetory
-    let order = document.createElement("input");
-    order.setAttribute("type", "number");
-    order.setAttribute("min", "1");
-    order.setAttribute("max", i.inventory);
-    order.value = "1";
-    container.appendChild(order);
   
     //buy
     let buying = document.createElement("button");

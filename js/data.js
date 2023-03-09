@@ -1,22 +1,23 @@
-let catalog = {
+let database = {
     "data": [
       {
-        "productName": "Producto A",
-        "category": "Filtro1",
+        "projectName": "Producto A",
+        "category": "web",
+        "labels": [2,4,5],
         "price": "30",
         "image": "./img/ubits.png",
         "inventory": 14,
       },
       {
-        "productName": "Producto 4",
-        "category": "Filtro2",
+        "projectName": "Producto 4",
+        "category": "design",
         "price": "49",
         "image": "./img/ubits.png",
         "inventory": 3,
       },
       {
-        "productName": "Producto H",
-        "category": "Filtro4",
+        "projectName": "Producto H",
+        "category": "branding",
         "price": "99",
         "image": "./img/ubits.png",
         "inventory": 2,
