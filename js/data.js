@@ -1,26 +1,34 @@
 let database = {
     "data": [
       {
-        "projectName": "Producto A",
-        "category": "web",
+        "title": "Nombre del Proyecto o título de uso",
+        "category": "web", 
         "labels": [2,4,5],
-        "price": "30",
-        "image": "./img/ubits.png",
-        "inventory": 14,
+        "description":"Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum", 
+        "autor": "Nombre Apellidos", 
+        "url" : "URL del proyecto o carpeta",
+        "prompt": "Posible código",
+        "modal":"Nombre del componente de detalles"
       },
       {
-        "projectName": "Producto 4",
-        "category": "design",
-        "price": "49",
-        "image": "./img/ubits.png",
-        "inventory": 3,
+        "title": "Nombre del Proyecto o título de uso",
+        "category": "web", 
+        "labels": [2,4,5],
+        "description":"Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum", 
+        "autor": "Nombre Apellidos", 
+        "url" : "URL del proyecto o carpeta",
+        "prompt": "Posible código",
+        "modal":"Nombre del componente de detalles"
       },
       {
-        "projectName": "Producto H",
-        "category": "branding",
-        "price": "99",
-        "image": "./img/ubits.png",
-        "inventory": 2,
+        "title": "Nombre del Proyecto o título de uso",
+        "category": "web", 
+        "labels": [2,4,5],
+        "description":"Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum", 
+        "autor": "Nombre Apellidos", 
+        "url" : "URL del proyecto o carpeta",
+        "prompt": "Posible código",
+        "modal":"Nombre del componente de detalles"
       },
-    ],
+    ]
   };
