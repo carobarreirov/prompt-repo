@@ -1,46 +1,59 @@
-for (let i of database.data) {
+setTimeout(() =>{
+  for (let i of database.data) {
     //Create Card
     let card = document.createElement("div");
-    card.classList.add("item");
-    card.setAttribute("id", i.projectName);
-    //Card should have category and should stay hidden initially
-    card.classList.add("card", i.category, "hide");
-    //image div
-    let imgContainer = document.createElement("div");
-    imgContainer.classList.add("image-container");
-    //img tag
-    let image = document.createElement("img");
-    image.setAttribute("src", i.image);
-    imgContainer.appendChild(image);
-    card.appendChild(imgContainer);
-    //container
-    let container = document.createElement("div");
-    container.classList.add("container");
-    //product name
-    let name = document.createElement("h5");
-    name.classList.add("product-name");
-    name.innerText = i.projectName.toUpperCase();
-    container.appendChild(name);
-    //price
-    let price = document.createElement("h6");
-    price.innerText = "$" + i.price + " MXN";
-    container.appendChild(price);
-  
-    //inventory 
-    let inventory = document.createElement("h6");
-    inventory.innerText = "Disponibles: " + i.inventory;
-    container.appendChild(inventory);
-  
-    let division = document.createElement("hr");
-    container.appendChild(division);
-  
-    //buy
-    let buying = document.createElement("button");
-    order.setAttribute("type", "submit");
-    buying.innerText = "Comprar".toUpperCase();
-    buying.classList.add("catalog-button");
-    container.appendChild(buying);
-  
-    card.appendChild(container);
-    document.getElementById("portfolio-grid").appendChild(card);
+    card.classList.add("item","design","col-sm-6","col-md-4","col-lg-4","mb-4");
+    card.setAttribute("id", i.title);
+
+    let cardContent = document.createElement("div");
+    cardContent.classList.add("card", i.category, "text-center");
+    // cardContent.classList.add("card", i.category, "text-center","hide");
+    card.appendChild(cardContent);
+
+    let cardHeader = document.createElement("div");
+    cardHeader.classList.add("card-header");
+    cardHeader.innerText = i.category;
+    cardContent.appendChild(cardHeader);
+
+    let cardBody = document.createElement("div");
+    cardBody.classList.add("card-body");
+    cardContent.appendChild(cardBody);
+
+    let cardTitle = document.createElement("h5");
+    cardTitle.classList.add("card-title");
+    cardTitle.innerText = i.title;
+    cardBody.appendChild(cardTitle);
+
+    for(let s of i.labels){
+      let label = document.createElement("span");
+      label.classList.add("badge","rounded-pill","text-bg-primary");
+      label.innerText = s;
+      cardBody.appendChild(label);
+    }
+
+    let cardDesc = document.createElement("p");
+    cardDesc.classList.add("card");
+    cardDesc.innerText = i.description;
+    cardBody.appendChild(cardDesc);
+    
+    let cardFooter = document.createElement("div");
+    cardFooter.classList.add("card-footer", "text-muted");
+    cardContent.appendChild(cardFooter);
+
+    let detalles = document.createElement("button");
+    detalles.classList.add("btn","btn-dark","mt-3");
+    detalles.setAttribute("href","#");
+    detalles.setAttribute("type","button");
+    detalles.setAttribute("data-bs-toggle","modal");
+    detalles.setAttribute("data-bs-target",i.modal);
+    detalles.innerText = "Detalles ";
+    cardFooter.appendChild(detalles);
+
+    let mas = document.createElement("span");
+    mas.classList.add("bi-info-circle-fill");
+    detalles.appendChild(mas);
+
+    document.getElementById("portfolio").appendChild(card);
   }
+},"1000");
+
