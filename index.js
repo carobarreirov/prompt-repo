@@ -13,26 +13,3 @@ const loadDataset = async () => {
 };
 
 loadDataset();
-/* 
-let database = {
-    "data": [
-      {
-        "title": "Producto A",
-        "category": "web",
-        "labels": [2,4,5],
-        "description":"Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
-      },
-      {
-        "title": "Producto B",
-        "category": "webos",
-        "labels": [1,3,8],
-        "description":"Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
-      },
-      {
-        "title": "Producto C",
-        "category": "webotes",
-        "labels": [4,6,9],
-        "description":"Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
-      },
-    ]
-  }; */
