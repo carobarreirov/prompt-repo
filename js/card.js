@@ -1,5 +1,4 @@
-setTimeout(() =>{
-  for (let i of database.data) {
+for (let i of database.data) {
     //Create Card
     let card = document.createElement("div");
     card.classList.add("item","design","col-sm-6","col-md-4","col-lg-4","mb-4");
@@ -55,5 +54,3 @@ setTimeout(() =>{
 
     document.getElementById("portfolio").appendChild(card);
   }
-},"1000");
-
